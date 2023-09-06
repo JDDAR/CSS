@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bg-color-wite : #ece4e4; 
+}
+body {
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+    font-family: 'Rubik', sans-serif;
+}
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 50px;
+}
+.menu-section{
+  width: 20%;
+  margin: auto;
+  border: 1px solid white;
+}
+.header-menu{
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color:lightgray;
+}
+.header-menu div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  border: 1px soloid red;
+  gap: 5px;
+  cursor: pointer;
+}
+.menu-icon span {
+  width: 30%;
+  height: 2px;
+  background-color: #434343;
+}
+.search-icon {
+  cursor: pointer;
+}
+.input-seach {
+  position: absolute;
+  padding: 5px;
+  border-radius: 50px;
+  margin-left: 15px;
+  display: none;
+
+}
+.seach-active {
+    animation:  seach .5s ease-in-out;
+    display: block;
+}
+@keyframes seach {
+  0%{
+    opacity: 0;
+    transform: translateX(35px);
+  }
+}
+/*  info content ************************************************* */
+.content {
+  background-color: var(--bg-color-wite);
+  padding: 25px;
+  position: relative;
+}
+.line {
+  background-color: lightgray;
+  width: 5px;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  z-index: 0; 
+  left: 30px;
+}
+
+.content-list {
+  display: flex;
+  z-index: 2;
+  margin-bottom: 25px;
+  animation: info 1.5s ease-in-out ;
+}
+@keyframes info {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.circle {
+  border: 2px solid darkblue;
+  background-color: var(--bg-color-wite);
+  box-shadow: 0 0 0 3px var(--bg-color-wite);
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  z-index: 2;
+}
+.notification-info {
+  margin-left: 20px;
+}
+.date {
+ font-size: .8em;
+ font-weight: 300;
+ margin-bottom: 10px;
+}
+.type-notification {
+  font-weight: 300;
+}
+.type-notification span {
+  font-weight: 400;
+}

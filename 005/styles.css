@@ -14,7 +14,6 @@ body {
   align-items: center;
   background-color: lightcyan;
   font-family: 'Urbanist', sans-serif;
-  border: 1px solid blue;
   position: relative;
 }
 
@@ -25,26 +24,29 @@ body {
   background-color: rgb(255, 255, 255);
   border-radius: 12px;
   box-shadow: 15px 15px 33px -1px rgba(0, 0, 0, 0.2);
-  border: 1px solid red;
+
 }
+
 @media (max-width: 1200px) {
   .container {
     width: 50vw;
-    border: 1px solid rgb(13, 255, 0); 
+
   }
 }
+
 @media (max-width: 900px) {
   .container {
     width: 80vw;
-    border: 1px solid rgb(13, 255, 0);
+
   }
 }
+
 @media (max-width: 600px) {
   .container {
     width: 90vw;
-    border: 1px solid rgb(13, 255, 0);
   }
 }
+
 .header {
   height: 10%;
   background-color: lightsalmon;
@@ -113,4 +115,203 @@ body {
   height: 3px;
   border-radius: 3px;
   background-color: rgb(128, 139, 240);
+}
+
+/*  Graficos  */
+.sectionGrap {
+  padding: 0px 35px 35px 35px;
+}
+
+.graphic {
+  position: relative;
+}
+
+.lines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.line1,
+.line2,
+.line3 {
+  position: relative;
+  width: 100%;
+  height: 1.5px;
+  background-color: rgba(0, 0, 0, 0.166);
+  display: flex;
+}
+
+/* red line */
+
+svg {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  line-height: 1.15;
+}
+
+.data-red polyline {
+  fill: none;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke: lightcoral;
+}
+
+.points-Cont {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+.point {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  background-color: lightsalmon;
+  transform: translateX(-7px);
+}
+
+.point-01 {
+  left: 0px;
+  top: 122px;
+}
+.point-02 {
+  left: 105px;
+  top: 27px;
+}
+.point-03 {
+  left: 210px;
+  top: 55px;
+}
+.point-04 {
+  left: 315px;
+  top: 16px;
+}
+.point-05 {
+  left: 420px;
+  top: 94px;
+}
+.point-06 {
+  left: 525px;
+  top: 123px;
+}
+.point-07 {
+  left: 587px;
+  top: 65px;
+}
+.tooltip {
+  background-color: lightcoral;
+  position: absolute;
+  bottom: 13px;
+  left: 50%;
+  transform: translate3d(-50%, 0px,0);
+  font-size: 16px;
+  line-height: 35px;
+  padding: 0px 6px 10px 6px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  display: grid;
+  place-items: top;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+  clip-path: polygon(0% 0%, 100% 0, 100% 75%,70% 75%, 50% 100%, 30% 75%, 0% 75%);
+}
+
+.point:hover .tooltip{
+  visibility: visible;
+  bottom: 30px;
+  opacity: 1;
+}
+
+/* Blue line */
+
+.data-blue polyline {
+  fill: none;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke: lightskyblue;
+}
+.point-blue {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  background-color:lightskyblue;
+  transform: translateX(-7px);
+}
+.point-01-blue {
+  left: 0px;
+  top: 300px;
+}
+
+.point-02-blue {
+  left: 105px;
+  top: 180px;
+}
+
+.point-03-blue {
+  left: 210px;
+  top: 209px;
+}
+
+.point-04-blue {
+  left: 315px;
+  top: 168px;
+}
+
+.point-05-blue{
+  left: 420px;
+  top: 247px;
+}
+
+.point-06-blue {
+  left: 525px;
+  top: 275px;
+}
+
+.point-07-blue {
+  left: 587px;
+  top: 220px;
+}
+.tooltip-blue {
+  background-color: lightskyblue;
+  position: absolute;
+  bottom: 13px;
+  left: 50%;
+  transform: translate3d(-50%, 0px, 0);
+  font-size: 16px;
+  line-height: 35px;
+  padding: 0px 6px 10px 6px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  display: grid;
+  place-items: top;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+  clip-path: polygon(0% 0%, 100% 0, 100% 75%, 70% 75%, 50% 100%, 30% 75%, 0% 75%);
+}
+.point-blue:hover .tooltip-blue {
+  visibility: visible;
+  bottom: 30px;
+  opacity: 1;
 }
