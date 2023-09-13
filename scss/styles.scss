@@ -1,0 +1,9 @@
+@use 'variables' as var;
+@use 'format';
+@use 'index';
+
+body { 
+  background: var.$light-gray;
+  padding-top: 50px;
+  font-family: var.$family-fonts;
+}

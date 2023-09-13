@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700&display=swap');
 * {
   padding: 0;
   margin: 0;
@@ -11,6 +12,38 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+/*Botones Generales */
+
+.buttons-general {
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-family: Work Sans, sans-serif;
+
+}
+
+.buttons-general a {
+  padding: 10px 20px;
+  border: 3px solid #888888;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.buttons-general i {
+  margin-right: 15px;
+}
+
+@media (max-width: 560px) {
+  .buttons-general {
+    display: none;
+  }
 }
 
 .container {
