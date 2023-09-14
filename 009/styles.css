@@ -1,0 +1,157 @@
+body{ 
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/*Botones Generales */
+
+.buttons-general {
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-family: Work Sans, sans-serif;
+
+}
+
+.buttons-general a {
+  padding: 10px 20px;
+  border: 3px solid #888888;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.buttons-general i {
+  margin-right: 15px;
+}
+
+@media (max-width: 560px) {
+  .buttons-general {
+    display: none;
+  }
+}
+
+/* Auniverse*/
+
+.container{
+  aspect-ratio: 1 / 1;
+  width: 40vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+  position: relative;
+}
+.universe{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+
+}
+.sun { 
+  position: absolute;
+  width: 10em;
+  height: 10em;
+  background-color: yellow;
+  border-radius: 50%;
+  box-shadow: 0 0 3em lightyellow;
+  
+}
+.earth,
+.moon { 
+  position: absolute;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+  border-width: 0.1em 0.1em 0 0;
+  border-radius: 50%; 
+
+}
+.earth { 
+  top: 10em;
+  left: 10em;
+  width: 30em;
+  height: 30em;
+  animation: Orbit 36.5s linear infinite;
+}
+.moon{
+  top: 0;
+  right: 0;
+  width: 9em;
+  height: 9em;
+  animation: Orbit 2.7s linear infinite;
+}
+.earth::before,
+.moon::before{ 
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+.earth::before{ 
+  top: 2.8em;
+  right: 2.8em;
+  width: 3em;
+  height: 3em;
+  background-color: darkblue;
+} 
+.moon::before{ 
+  top: 0.9em;
+  right: 0.3em;
+  width: 1.2em;
+  height: 1.2em;
+  background-color: lightgray;
+}
+@keyframes Orbit {
+  to{ 
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 560px){ 
+
+ .container{ 
+    width: 75vw;
+ }
+ .sun{ 
+    width: 5em;
+    height: 5em;
+ }
+ .universe{ 
+  width: 0%;
+ }
+ .earth { 
+  top: 5em;
+  left: 5em;
+  width: 15em;
+  height: 15em;
+ }
+ .earth::before{
+
+  top: 1em;
+  right: 1.7em;
+  width: 1.5em;
+  height: 1.5em;
+ }
+ .moon{ 
+  width: 5em;
+  height: 5em;
+  top: -1em;
+  right: 0em;
+ }
+ .moon::before{ 
+  width: .9em;
+  height: .9em;
+  top: .3em;
+ }
+}
+
+
