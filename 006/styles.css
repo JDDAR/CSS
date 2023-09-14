@@ -10,12 +10,12 @@ body {
 
   background-color: #50E3C2;
   background-image:
-    radial-gradient(at 47% 33%, hsl(162.00, 77%, 40%) 0, transparent 59%),
-    radial-gradient(at 82% 65%, hsl(198.00, 100%, 50%) 0, transparent 55%);
+  radial-gradient(at 47% 33%, hsl(162.00, 77%, 40%) 0, transparent 59%),
+  radial-gradient(at 82% 65%, hsl(198.00, 100%, 50%) 0, transparent 55%);
   height: 100vh;
   display: flex;
   justify-content: center;
-  padding-top: 200px;
+  padding-top: 100px;
   font-family: 'Lexend Deca', sans-serif;
   color: #2c2c2c;
 }
@@ -206,3 +206,14 @@ body {
   background-color: #50E3C2;
   transition: all .3s ease-in-out;
 }
+
+/* responsive */
+@media (max-width: 560px){ 
+  body { 
+    padding-top: 50px;
+  }
+  .container {
+    width: 90%;
+    height: auto;
+  }
+} 

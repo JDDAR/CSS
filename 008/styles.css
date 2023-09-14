@@ -20,6 +20,7 @@
 body {
    background-color: #2c2c22;
   font-family: 'Rubik', sans-serif;
+  padding-top: 5%;
 }
 /*Botones Generales */
 
@@ -144,6 +145,33 @@ header{
   height: 100%;
   background-color: var(--color-bg-light);
 }
+@media (max-width: 560px ){ 
+  .content{ 
+    flex-direction: column;
+    height: 55vh;
+  }
+  .tools { 
+    width: 100%;
+    flex-direction: column;
+  }
+  .canvas { 
+    width: 100%;
+  }
+  .tools-one, .tools-two{ 
+    display: flex;
+    width: auto; 
+  }
+  .color11,
+  .color12,
+  .color13,
+  .color14,
+  .color25,
+  .color26,
+  .color27,
+  .color28{ 
+    display: none;
+  }
+}
 /* Colors ***************************************************************************** */
 
 .colors {
@@ -157,7 +185,7 @@ header{
 }
 .color-left{
   background-color: var(--color-bg-light);
-  width: 60px;
+
   height: 100%;
   box-shadow: var(--border-box-styles);
   display: flex;
