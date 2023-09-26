@@ -11,40 +11,16 @@
   margin: auto;
 }
 
-.header {
-  width: 60%;
-  margin: 25px auto 25px auto;
-}
-.header__buttons {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-.header__buttons a {
-  padding: 10px 20px;
-  border: 3px solid #888888;
-  border-radius: 5px;
-  color: #3f3844;
-  text-decoration: none;
-}
-.header__buttons a:hover {
-  background-color: #ff7f50;
-}
-.header__buttons i {
-  margin-right: 15px;
-}
-
 .description {
   height: 50vh;
-  margin: auto;
+  margin-top: 130px;
   margin-bottom: 25px;
   position: relative;
 }
 .description__content {
   height: 100%;
   widows: 100%;
-  background: #f7f7f7;
+  background: #d9d9d9;
   border-radius: 12px;
   padding: 50px;
   display: flex;
@@ -56,8 +32,8 @@
   flex-direction: column;
 }
 .description__title-container h3 {
-  font-weight: 500;
-  color: #ff7f50;
+  font-weight: 600;
+  color: #2965f1;
 }
 .description__title {
   font-size: 3rem;
@@ -69,22 +45,24 @@
   padding: 15px;
 }
 .description__text p {
-  font-weight: 300;
-  line-height: 1.5rem;
+  font-size: 1em;
+  line-height: 1.5em;
+  color: rgba(30, 30, 30, 0.8);
 }
 .description__text p a {
   text-decoration: none;
-  color: #ff7f50;
+  color: #2965f1;
   font-weight: 500;
 }
 
 .exercises {
-  background: #f7f7f7;
+  background: #d9d9d9;
   padding: 50px;
   border-radius: 12px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 35px;
+  position: relative;
 }
 .exercises__container {
   border: 0px solid blueviolet;
@@ -120,13 +98,79 @@
   color: #3f3844;
 }
 .exercises__data-links a {
-  color: #ff7f50;
+  color: #2965f1;
   margin-left: 15px;
 }
 
+@media (max-width: 1280px) {
+  .container {
+    width: 80%;
+  }
+}
+@media (max-width: 800px) {
+  .exercises {
+    grid-template-columns: 1fr;
+  }
+  .description__title-container h1 {
+    font-size: 2em;
+  }
+  .description {
+    height: auto;
+  }
+}
 body {
-  background: #c3c3c3;
-  font-family: Work Sans, sans-serif;
+  font-family: "Work Sans", sans-serif;
+}
+
+/* BG */
+.bg {
+  background-color: #1e1e1e;
+  height: auto;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+.bg__cuadricula {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(30, 1fr);
+  grid-template-rows: repeat(30, 1fr);
+  background: #1e1e1e;
+  filter: saturate(2);
+}
+.bg .colorBox {
+  z-index: 2;
+  filter: brightness(1.1);
+  transition: 1s ease;
+  position: relative;
+  margin: 1px;
+  background: #1e1e1e;
+}
+.bg .colorBox:hover {
+  background: #2965f1;
+  transition: 0s;
+}
+.bg .bgAdmin {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: #2965f1;
+  filter: blur(60px);
+  animation: scannerBox 6s linear infinite;
+}
+@keyframes scannerBox {
+  0% {
+    top: -80px;
+  }
+  100% {
+    top: 90%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

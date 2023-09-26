@@ -2,11 +2,46 @@
 
 
 $dark-gray : #888888;
-$light-bg : #f7f7f7;
+$light-bg : #d9d9d9;
 $light-gray : #c3c3c3;
 $color-black: #3f3844;
 $color-yellow : #edd37f;
 $color-orange : #ff7f50;
-/* Fonts */
+$color-black-bg: #1e1e1e;
+$color-white-bg: #d9d9d9;
+$color-blue-css: #2965f1;
 
-$family-fonts : Work Sans, sans-serif;
+
+
+/* Fonts */
+//Fonts 
+
+$font-family : 'Work Sans', sans-serif;
+
+$font-weight-ExtraLight : 200;
+$font-weight-light: 300;
+$font-weight-Regular: 400;
+$font-weight-Medium: 500;
+$font-weight-SemiBold:600;
+$font-weight-Bold: 700;
+
+$font-size-h1: 5em;
+$font-size-h2: 2em;
+$font-size-text: 1em;
+
+
+//Mixins
+
+@mixin containerBorderWhite{
+  border: 1px solid $color-white-bg;
+}
+
+@mixin containerBorderBlack{
+  border: 1px solid $color-black-bg;
+}
+
+@mixin textContent{
+  font-size: $font-size-text;
+  line-height: 1.5em;
+  color: rgba($color-black-bg, 0.8);
+}

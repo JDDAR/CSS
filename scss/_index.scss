@@ -3,37 +3,12 @@
   width: 60%;
   margin: auto;
 }
-// Estilos -> Header 
-
-.header{
-  width: 60%;
-  margin: 25px auto 25px auto;
-  &__buttons{ 
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    a{ 
-      padding: 10px 20px;
-      border: 3px solid var.$dark-gray;
-      border-radius: 5px;
-      color: var.$color-black;
-      text-decoration: none;
-      &:hover{ 
-        background-color: var.$color-orange;
-      }
-    }
-    i {
-     margin-right: 15px; 
-    }
-  }
-}
 
 // Estilos description 
 
 .description{
   height: 50vh;
-  margin: auto;
+  margin-top: 130px;
   margin-bottom: 25px;
   position: relative;
 
@@ -54,8 +29,8 @@
     
 
     h3{ 
-      font-weight: 500;
-      color: var.$color-orange;
+      font-weight: var.$font-weight-SemiBold;
+      color: var.$color-blue-css;
     }
   }
 
@@ -68,13 +43,11 @@
     border-radius: 12px;
     padding: 15px;
 
-    p{ 
-      font-weight: 300;
-      line-height: 1.5rem;
-
+    p{
+      @include var.textContent;
       a{ 
         text-decoration: none;
-        color: var.$color-orange;
+        color: var.$color-blue-css;
         font-weight: 500;
       }
     }
@@ -91,7 +64,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 35px;
-
+  position: relative;
   &__container{ 
     border: 0px solid blueviolet;
     width: 100%;
@@ -129,8 +102,26 @@
   }
   &__data-links { 
     a { 
-      color: var.$color-orange;
+      color: var.$color-blue-css;
       margin-left: 15px;
     }
   }
 }
+
+@media ( max-width: 1280px){ 
+    .container {
+      width: 80%;
+    }  
+}
+@media (max-width: 800px){
+  .exercises {
+    grid-template-columns: 1fr;
+  }
+  .description__title-container h1{
+    font-size: 2em;
+  }
+  .description {
+    height: auto;
+  }
+}
+
