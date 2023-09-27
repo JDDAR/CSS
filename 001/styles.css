@@ -3,9 +3,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #ffffff;
 }
 body {
+  color: #ffffff;
   height: 100vh;
   display: flex;
   justify-content: center;

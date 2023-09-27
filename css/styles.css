@@ -118,6 +118,26 @@
     height: auto;
   }
 }
+@media (max-width: 500px) {
+  .container {
+    width: 90%;
+  }
+  .description {
+    margin-top: 200px;
+  }
+  .description__content {
+    padding: 20px;
+  }
+  .description__title-container {
+    margin-bottom: 35px;
+  }
+  .description__text {
+    border: 1px solid #888888;
+  }
+  .exercises {
+    padding: 5px;
+  }
+}
 body {
   font-family: "Work Sans", sans-serif;
 }
